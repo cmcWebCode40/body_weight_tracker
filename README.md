@@ -6,4 +6,6 @@ This was a task given by our Mentor `Everitus Olumese`
 to build the UI of a body weight tracker no with just HTML and CSS
 
 ## Deployment 
+This site is deploy to netlify
+[bodyweighttracker](https://bodyweighttracker.netlify.com)
 
