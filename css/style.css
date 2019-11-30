@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+:root {
+    --primary-color:#06bc65;
+    --secondary-color:#052555;
+    --text-color:#333;
+    --white-text:#fff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    position: absolute;
+    clip-path: polygon(61% 0, 100% 0%, 100% 100%, 41% 100%);
+    background: var(--secondary-color);
+    height: 120%;
+    width: 100%;
+   z-index: -1;
+   top: -3%;
+}
+
+span {
+    color:var(--primary-color) 
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-gap: -.9em;
+}
+
+.col-1 {
+    text-align: center;
+    margin: 2em -1em 0 2em;
+}
+
+.col-1 .header {
+    color: var(--primary-color) ;
+    
+}
+
+.col-1 .text {
+    line-height: 2;
+    font-size: 1.3rem;
+    text-align: justify;
+    color: var(--text-color);
+   
+}
+
+.col-2 {
+    text-align: center;
+    margin: 2em 10em 0 7em;
+    color: var(--white-text)
+}
+
+.col-2 h3 {
+    margin: 3rem 2rem 0 0 ;
+    font-size: 1.6rem;
+}
+
+form {
+    position: relative;
+    animation: 1s linear box forwards;
+    margin:7em 0 0 1.4em;
+    height: 700px;
+    width: 700px;
+}
+
+div label {
+    display: block;
+    color: var(--white-text);
+    margin:.6em  16em 0.3em 0;
+    font-size: 1rem;
+}
+
+div {
+    margin-top: .8em;
+}
+
+.img-div {
+    position: relative;
+    animation: 1s linear pic forwards;
+}
+
+
+input {
+    width: 60%;
+    padding: 8px 10px;
+    border-radius: 7px;
+    border: none;
+}
+
+input[type='submit'] {
+    margin-top: 1rem;
+    background: var(--primary-color) ;
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background: rgba(5, 150, 36, 0.7);
+}
+
+@keyframes pic {
+    from {left: -160px}
+    to {left: 0}
+}
+
+@keyframes box {
+    from {right: -160px}
+    to {right: 0}
+}
+
+@media (max-width:1024px) {
+
+    .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper {
+        display: none;
+    }
+
+    .col-2 {
+        background:var(--secondary-color);
+        margin: 0;
+        width: 100%;
+    }
+    
+    div label {
+        margin:.6em  10em 0 0;
+    }
+
+    form {
+        margin:7em 2em 0 1.4em;
+        width: 100%;
+
+    }
+
+    .col-1 .text {
+      margin: .8em;  
+    }
+
+    .col-1 {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        text-align: center;
+    }
+}
